@@ -45,13 +45,16 @@ export default function ReceiptTemplate({ customerName, customerPhone, paymentSt
       
       {/* Brand Header */}
       <div style={{ textAlign: 'center', borderBottom: `2px solid ${colors.amber600}`, paddingBottom: '24px', marginBottom: '32px' }}>
-        {logo && <img src="/image_557defd.jpg" alt="Biz Logo" style={{ width: '80px', height: '80px', margin: '0 auto 12px auto', borderRadius: '50%', objectFit: 'cover' }} />}
-          <img 
-            src={`${window.location.origin}/image_557defd.jpg`} 
-            alt="Her Global Collections Logo" 
-            crossOrigin="anonymous"
-            style={{ width: '80px', height: '80px', margin: '0 auto 12px auto', borderRadius: '50%', objectFit: 'cover' }} 
-          />
+       <img
+        src="/image_557d7efd.jpg"
+        alt="Her Global Collections"
+        style={{
+        display: 'block',
+        width: '100px',
+        height: '100px',
+        margin: '0 auto 12px auto',
+        objectFit: 'contain'
+    }} />
         <h1 style={{ fontSize: '28px', fontWeight: '900', textTransform: 'uppercase', letterSpacing: '0.1em', color: colors.slate800, margin: 0 }}>
           Her Global Collections
         </h1>
@@ -72,7 +75,7 @@ export default function ReceiptTemplate({ customerName, customerPhone, paymentSt
             <td style={{ verticalAlign: 'top', textAlign: 'right', width: '50%' }}>
               <h3 style={{ fontSize: '12px', fontWeight: 'bold', textTransform: 'uppercase', color: colors.slate400, margin: '0 0 4px 0' }}>Receipt Details:</h3>
               <p style={{ color: colors.slate600, margin: 0 }}>
-                <span style={{ fontWeight: '600', color: colors.slate700 }}>Date:</span> {formattedDate}
+                <span style={{ fontWeight: '600', marginBottom: '8px', color: colors.slate700 }}>Date:</span> {formattedDate}
               </p>
               <p style={{ marginTop: '4px', margin: 0 }}>
                 <span style={{ 
@@ -82,6 +85,7 @@ export default function ReceiptTemplate({ customerName, customerPhone, paymentSt
                   fontSize: '12px', 
                   fontWeight: 'bold', 
                   textTransform: 'uppercase',
+                  marginTop: '8px',
                   backgroundColor: paymentStatus === 'Cash' ? colors.greenBg : colors.blueBg,
                   color: paymentStatus === 'Cash' ? colors.greenText : colors.blueText
                 }}>
@@ -127,7 +131,7 @@ export default function ReceiptTemplate({ customerName, customerPhone, paymentSt
       </div>
 
       {/* Aesthetic Footer */}
-      <div style={{ textAlign: 'center', borderTop: `1px dashed ${colors.slate300}`, paddingTop: '16px', fontSize: '12px', fontStyle: 'italic', color: colors.slate400 }}>
+      <div style={{ textAlign: 'center', borderTop: `1px dashed ${colors.slate300}`, paddingTop: '16px', fontSize: '14px', fontStyle: 'italic', color: colors.slate400 }}>
         Don’t just show up, make an impression.
       </div>
     </div>
