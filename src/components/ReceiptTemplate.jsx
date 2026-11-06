@@ -45,7 +45,13 @@ export default function ReceiptTemplate({ customerName, customerPhone, paymentSt
       
       {/* Brand Header */}
       <div style={{ textAlign: 'center', borderBottom: `2px solid ${colors.amber600}`, paddingBottom: '24px', marginBottom: '32px' }}>
-        {logo && <img src={logo} alt="Biz Logo" style={{ width: '80px', height: '80px', margin: '0 auto 12px auto', borderRadius: '50%', objectFit: 'cover' }} />}
+        {logo && <img src="/image_557defd.jpg" alt="Biz Logo" style={{ width: '80px', height: '80px', margin: '0 auto 12px auto', borderRadius: '50%', objectFit: 'cover' }} />}
+          <img 
+            src={`${window.location.origin}/image_557defd.jpg`} 
+            alt="Her Global Collections Logo" 
+            crossOrigin="anonymous"
+            style={{ width: '80px', height: '80px', margin: '0 auto 12px auto', borderRadius: '50%', objectFit: 'cover' }} 
+          />
         <h1 style={{ fontSize: '28px', fontWeight: '900', textTransform: 'uppercase', letterSpacing: '0.1em', color: colors.slate800, margin: 0 }}>
           Her Global Collections
         </h1>
@@ -122,7 +128,7 @@ export default function ReceiptTemplate({ customerName, customerPhone, paymentSt
 
       {/* Aesthetic Footer */}
       <div style={{ textAlign: 'center', borderTop: `1px dashed ${colors.slate300}`, paddingTop: '16px', fontSize: '12px', fontStyle: 'italic', color: colors.slate400 }}>
-        Thank you for your patronage. Elevate your presence with every spray.
+        Don’t just show up, make an impression.
       </div>
     </div>
   );
